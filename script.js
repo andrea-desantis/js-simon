@@ -62,9 +62,9 @@ function generaNumeriUnici(min, max, quantita){
             result.push(random);
         } else {
             i--;
-        }
-        
+        }   
     }
+    return result;
 }
 
 // gioco
@@ -78,7 +78,7 @@ iniziaBtn.addEventListener("click", function(){
     numeri = generaNumeriUnici( min, max, totNum);
     numeriElem.innerHTML = numeri;
     numeriElem.classList.remove("none")
-    setTimerout(function(){
+    setTimeout(function(){
         numeriElem.classList.add("none")
         form.classList.remove("none")
     }, time);
@@ -91,7 +91,7 @@ form.addEventListener ("submit", function (event){
     for (let i=0; i<inputs.length; i++){
         const curNumbers = parseInt(inputs[i].value);
         if (!userNumbers.includes(curNumber)) {
-            userNumbers.push(curNumber);
+            numeriUtente.push(curNumber);
         }  
     }
 
@@ -105,5 +105,5 @@ form.addEventListener ("submit", function (event){
     }
 
     risultatoElem.innerHTML = `Hai infovinato ${numeriCorretti.length} numeri: ${numeriCorretti}`;
-    risultatoElem.classList =
+    risultatoElem.classList.remove("none");
 });
