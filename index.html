@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <main class="flex column">
+
+        <button class="btn " id="inizia">inizia</button>
+        <div class="center flex none">
+            <!-- timer -->
+            <h1 id="timer"></h1>
+            <p>inserisci tutti i numeri che ricordi (l'ordine non è importante)</p>
+        </div>
+        <div class="center flex column ">
+            <div id="numeri" class="none">
+                <!-- numeri -->
+            </div>
+            <form action= "" id="numbers-form"  class="none flex gap center none">
+                <!-- input -->
+                
+                <input type="number" >
+
+                <input type="number" >
+
+                <input type="number" >
+
+                <input type="number" >
+
+                <input type="number" > 
+                <button class="btn" id="controlla">Controlla</button>
+            </form>
+            
+        </div>
+
+        <div class="center flex none">
+            <!-- numeri indovinati -->
+             <span id="risultato">hai indovinato x num</span>
+        </div>
+    </main>
 
 
 
     <script src="./script.js"></script>
 </body>
+
 </html>
